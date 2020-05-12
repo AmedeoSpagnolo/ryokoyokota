@@ -1,0 +1,11 @@
+body {
+  background-color: #F9F9F9;
+}
+.mysvg{
+  width: 5rem;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}

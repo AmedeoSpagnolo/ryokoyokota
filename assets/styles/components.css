@@ -1,0 +1,26 @@
+.components  {
+  max-width: 40rem;
+}
+.components h3 {
+  text-align: center;
+}
+.components .component {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 12px;
+  padding: 1rem;
+}
+.components .component .comp_icon {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 1rem;
+}
+.components .component .cta {
+  width: 15rem;
+  height: 3rem;
+  margin-left: 1rem;
+  background-color: #3FD1E0;
+  color: white;
+  padding: 0;
+  text-align: center;
+}

@@ -1,0 +1,36 @@
+.values {
+  padding: 0 2rem;
+}
+
+.values .value {
+  background-color: white;
+  padding: 0;
+  margin: 2rem 0;
+  border-radius: 12px;
+  max-width: 40rem;
+}
+
+.values .value .title{
+  background-color: #4F4F4F;
+  border-radius: 12px 12px 0 0;
+  margin: 0;
+  color: white;
+  padding: 12px;
+  width: 100%;
+}
+
+.values .value .image{
+  width: 100%;
+  background-image: url("../imgs/hero.png");
+  background-size: cover;
+  height: 10rem;
+}
+
+.values .value .description{
+  padding: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.value-1 .image{
+}
