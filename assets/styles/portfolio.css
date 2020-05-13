@@ -1,0 +1,20 @@
+.portfolio {
+  margin: 0 2rem;
+}
+.portfolio .logo {
+  width: 15rem;
+}
+.portfolio .hello {
+  width: 100%;
+}
+.portfolio .img {
+  margin: 0;
+  width: 33.3%;
+  margin-right: 2rem;
+}
+
+.portfolio .info {
+  background-color: #444d59;
+  height: 30rem;
+  color: white;
+}
