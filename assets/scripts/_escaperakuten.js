@@ -6,9 +6,8 @@ $('document').ready(function(){
   var r = parseInt($("#ryoko").width())
   $("#ryoko").css("left", w/2 - r/2)
 
-  antenna()
   setInterval(function(){
-    antenna()
+    // antenna()
   }, 1000);
 
   function leftArrowPressed() {
