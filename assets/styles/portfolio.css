@@ -18,3 +18,13 @@
   height: 30rem;
   color: white;
 }
+.jobtitle {
+  color: #919191;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+.iam {
+  font-size: 46px;
+    margin: 0;
+}

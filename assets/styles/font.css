@@ -1,30 +1,38 @@
 @font-face {
-  font-family: 'Baloo2';
-  src: url('../fonts/Baloo_2/Baloo2-Regular.ttf') format('ttf');
-  /* src: url('../fonts/Baloo_2/Baloo2-Regular.otf') format('opentype'); */
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'baloo2';
+    src: url('../fonts/Baloo2/baloo2-bold-webfont.woff2') format('woff2'),
+         url('../fonts/Baloo2/baloo2-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'baloo2';
+    src: url('../fonts/Baloo2/baloo2-extrabold-webfont.woff2') format('woff2'),
+         url('../fonts/Baloo2/baloo2-extrabold-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Baloo2';
-  src: url('../fonts/Baloo_2/Baloo2-Medium.ttf') format('ttf');
-  /* src: url('../fonts/Baloo_2/Baloo2-Medium.otf') format('opentype'); */
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'baloo2';
+    src: url('../fonts/Baloo2/baloo2-medium-webfont.woff2') format('woff2'),
+         url('../fonts/Baloo2/baloo2-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Baloo2';
-  src: url('../fonts/Baloo_2/Baloo2-Bold.ttf') format('ttf');
-  /* src: url('../fonts/Baloo_2/Baloo2-Bold.otf') format('opentype'); */
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'baloo2';
+    src: url('../fonts/Baloo2/baloo2-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Baloo2/baloo2-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-  font-family: 'Baloo2';
-  src: url('../fonts/Baloo_2/Baloo2-Black.ttf') format('ttf');
-  /* src: url('../fonts/Baloo_2/Baloo2-Black.otf') format('opentype'); */
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'baloo2';
+    src: url('../fonts/Baloo2/baloo2-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/Baloo2/baloo2-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
 body{
   font-family: 'Baloo2' !important;
