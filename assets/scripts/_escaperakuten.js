@@ -33,7 +33,6 @@ $('document').ready(function(){
   }
   function leftArrowPressed() {
       var l = parseInt($("#ryoko").css("left"))
-      console.log(l);
       if(l > 0){
         $("#ryoko").css("left", parseInt($("#ryoko").css("left")) - 20)
         $("#ryoko_left").show()
@@ -42,9 +41,6 @@ $('document').ready(function(){
   }
   function rightArrowPressed() {
       var l = parseInt($("#ryoko").css("left"))
-      console.log(l);
-      console.log(r);
-      console.log(w);
       if(l + r < w){
         $("#ryoko").css("left", parseInt($("#ryoko").css("left")) + 20)
         $("#ryoko_left").hide()
@@ -72,41 +68,10 @@ $('document').ready(function(){
       "z-index": 950,
       "width": _w
     })
-    $(".canvas").append($ant)
+    $("#antennas").append($ant)
     $ant.animate({top: $(".canvas").height(),}, Math.random() + 5000, function(){
       $(this).remove();
     });
   }
 
 });
-
-
- // id="antenna" src="http://placekitten.com/69/71">
- // function fallingSnow() {
- //
- //     var $snowflakes = $(), qt = 20;
- //
- //     for (var i = 0; i < qt; ++i) {
- //         var $snowflake = $('<div class="snowflakes"></div>');
- //         $snowflake.css({
- //             'left': (Math.random() * $('#site').width()) + 'px',
- //             'top': (- Math.random() * $('#site').height()) + 'px'
- //         });
- //         // add this snowflake to the set of snowflakes
- //         $snowflakes = $snowflakes.add($snowflake);
- //     }
- //     $('#snowZone').prepend($snowflakes);
- //
- //     $snowflakes.animate({
- //         top: "500px",
- //         opacity : "0",
- //     }, Math.random() + 5000, function(){
- //         $(this).remove();
- //         // run again when all 20 snowflakes hit the floor
- //         if (--qt < 1) {
- //             fallingSnow();
- //         }
- //     });
- // }
- // fallingSnow();
- //

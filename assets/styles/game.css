@@ -35,6 +35,7 @@ svg {
   right: 0;
   left: 0;
   right: 0;
+  z-index: 995;
 }
 #ryoko #ryoko_right{
 
@@ -77,4 +78,10 @@ svg {
   margin: 2rem;
   border-radius: 6px;
   border: solid 1px transparent;
+}
+.gameover .back_home {
+  background-color: transparent;
+  text-decoration: none;
+  color: #8e98a7;
+  font-size: 20px;
 }
