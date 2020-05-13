@@ -6,6 +6,7 @@
 }
 .portfolio .hello {
   width: 100%;
+  margin: 2rem 0 0 0;
 }
 .portfolio .img {
   margin: 0;
@@ -15,7 +16,6 @@
 
 .portfolio .info {
   background-color: #444d59;
-  height: 30rem;
   color: white;
 }
 .jobtitle {
@@ -27,4 +27,53 @@
 .iam {
   font-size: 46px;
     margin: 0;
+    position: relative;
+}
+
+.info{
+  position: relative;
+  padding: 3rem 0;
+}
+.info .left {
+  background-color: #4f5967;
+  width: 33.3%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.info .content{
+  z-index: 100;
+}
+
+.info .content .section .title {
+  width: 33.3%;
+}
+.info .content .section_title{
+  text-align: right;
+  margin: 2px 0.7rem 2rem 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffdf36;
+}
+
+.experience {
+  margin: 0 0 3rem 1rem;
+
+}
+.experience .exp_title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #becde2;
+}
+.experience .exp_company {
+  margin: 0.2rem 0;
+  color: #f4f8fd;
+}
+.experience .exp_time {
+  margin: 0;
+  color: #78818e;
 }
