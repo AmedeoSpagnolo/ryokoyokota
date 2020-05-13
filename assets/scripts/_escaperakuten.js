@@ -6,10 +6,31 @@ $('document').ready(function(){
   var r = parseInt($("#ryoko").width())
   $("#ryoko").css("left", w/2 - r/2)
 
-  setInterval(function(){
-    // antenna()
-  }, 1000);
+  var dropping;
+  function startdropping(){
+    dropping = setInterval(function(){
+      antenna()
+    }, 1000);
+  }
+  startdropping()
 
+  $(".game").on("click",function(){
+    endgame()
+    clearInterval(dropping)
+    $(".antenna").remove()
+  })
+  $("#start").on("click",function(){
+    startgame()
+    startdropping()
+  })
+  function endgame(){
+    $(".game").hide()
+    $(".gameover").css("display","flex")
+  }
+  function startgame(){
+    $(".game").css("display","flex")
+    $(".gameover").hide()
+  }
   function leftArrowPressed() {
       var l = parseInt($("#ryoko").css("left"))
       console.log(l);
@@ -48,6 +69,7 @@ $('document').ready(function(){
       "left": parseInt(Math.random()*(w-_w)) ,
       "position": "absolute",
       "top": 0,
+      "z-index": 950,
       "width": _w
     })
     $(".canvas").append($ant)

@@ -41,7 +41,6 @@ svg {
 }
 
 .gameover{
-  display: none!important;
   background-color: #4f5967;
   width: 100%;
   height: 100%;
@@ -50,7 +49,18 @@ svg {
   left: 0;
   right: 0;
   position: absolute;
-  z-index: 1000;
+  z-index: 800;
+}
+.game{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 900;
 }
 
 .gameover .message{
