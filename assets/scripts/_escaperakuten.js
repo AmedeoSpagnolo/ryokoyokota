@@ -24,6 +24,7 @@ $('document').ready(function(){
     $(".game").hide()
     $(".gameover").css("display","flex")
     clearInterval(dropping)
+    $(".antenna").stop();
     $(".antenna").remove()
   }
   function startgame(){
