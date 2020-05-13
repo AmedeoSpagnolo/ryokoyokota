@@ -1,10 +1,13 @@
 $('document').ready(function(){
 
   window.addEventListener('keydown', moveSelection);
-  var w = parseInt($(".canvas").width())
-  var h = parseInt($(".canvas").height())
-  var r = parseInt($("#ryoko").width())
-  $("#ryoko").css("left", w/2 - r/2)
+  var w = parseInt($("#canvas").width())
+  var h = parseInt($("#canvas").height())
+  var rw = parseInt($("#ryoko").width())
+  var rh = parseInt($("#ryoko").height())
+  var aw = 30
+  var ah = 30
+  $("#ryoko").css("left", w/2 - rw/2)
 
   var dropping;
   function startdropping(){
@@ -14,20 +17,17 @@ $('document').ready(function(){
   }
   startdropping()
 
-  $(".game").on("click",function(){
-    endgame()
-    clearInterval(dropping)
-    $(".antenna").remove()
-  })
-  $("#start").on("click",function(){
-    startgame()
-    startdropping()
-  })
+  $(".game").on("click",endgame)
+  $("#start").on("click",startgame)
+
   function endgame(){
     $(".game").hide()
     $(".gameover").css("display","flex")
+    clearInterval(dropping)
+    $(".antenna").remove()
   }
   function startgame(){
+    startdropping()
     $(".game").css("display","flex")
     $(".gameover").hide()
   }
@@ -41,7 +41,7 @@ $('document').ready(function(){
   }
   function rightArrowPressed() {
       var l = parseInt($("#ryoko").css("left"))
-      if(l + r < w){
+      if(l + rw < w){
         $("#ryoko").css("left", parseInt($("#ryoko").css("left")) + 20)
         $("#ryoko_left").hide()
         $("#ryoko_right").show()
@@ -58,19 +58,23 @@ $('document').ready(function(){
     }
   };
   function antenna(){
-    // $(".canvas").add('img')
     var $ant = $("<img class='antenna' src='http://placekitten.com/69/71'></img>")
-    var _w = 30
     $ant.css({
-      "left": parseInt(Math.random()*(w-_w)) ,
+      "left": parseInt(Math.random()*(w-aw)) ,
       "position": "absolute",
       "top": 0,
       "z-index": 950,
-      "width": _w
+      "width": aw
     })
     $("#antennas").append($ant)
-    $ant.animate({top: $(".canvas").height(),}, Math.random() + 5000, function(){
-      $(this).remove();
+    $ant.animate({top: $(".canvas").height()-rh-ah,}, Math.random() + 5000, function(){
+      var _posA = parseInt($(this).css("left"))
+      var _posR = parseInt($("#ryoko").css("left"))
+      if(((_posA>=_posR)&&(_posA<=_posR+rw))||((_posA+aw>=_posR)&&(_posA+aw<=_posR+rw))){
+        endgame()
+      } else {
+        $(this).remove();
+      }
     });
   }
 
