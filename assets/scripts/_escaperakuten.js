@@ -1,17 +1,29 @@
 $('document').ready(function(){
 
   window.addEventListener('keydown', moveSelection);
-  $("#ryoko").css("left", $(".canvas").width()/2 - $("#ryoko").width()/2)
+  var w = parseInt($(".canvas").width())
+  var r = parseInt($("#ryoko").width())
+  $("#ryoko").css("left", w/2 - r/2)
 
   function leftArrowPressed() {
-      $("#ryoko").css("left", parseInt($("#ryoko").css("left")) - 20)
-      $("#ryoko_left").show()
-      $("#ryoko_right").hide()
+      var l = parseInt($("#ryoko").css("left"))
+      console.log(l);
+      if(l > 0){
+        $("#ryoko").css("left", parseInt($("#ryoko").css("left")) - 20)
+        $("#ryoko_left").show()
+        $("#ryoko_right").hide()
+      }
   }
   function rightArrowPressed() {
-      $("#ryoko").css("left", parseInt($("#ryoko").css("left")) + 20)
-      $("#ryoko_left").hide()
-      $("#ryoko_right").show()
+      var l = parseInt($("#ryoko").css("left"))
+      console.log(l);
+      console.log(r);
+      console.log(w);
+      if(l + r < w){
+        $("#ryoko").css("left", parseInt($("#ryoko").css("left")) + 20)
+        $("#ryoko_left").hide()
+        $("#ryoko_right").show()
+      }
   }
   function moveSelection(evt) {
     switch (evt.keyCode) {
