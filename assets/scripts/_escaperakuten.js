@@ -17,7 +17,7 @@ $('document').ready(function(){
   }
   startdropping()
 
-  $(".game").on("click",endgame)
+  // $(".game").on("click",endgame)
   $("#start").on("click",startgame)
 
   function endgame(){
