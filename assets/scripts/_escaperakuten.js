@@ -5,8 +5,8 @@ $('document').ready(function(){
   var h = parseInt($("#canvas").height())
   var rw = parseInt($("#ryoko").width())
   var rh = parseInt($("#ryoko").height())
-  var aw = 30
-  var ah = 30
+  var aw = 70
+  var ah = 70
   $("#ryoko").css("left", w/2 - rw/2)
 
   var dropping;
@@ -59,7 +59,7 @@ $('document').ready(function(){
     }
   };
   function antenna(){
-    var $ant = $("<img class='antenna' src='http://placekitten.com/69/71'></img>")
+    var $ant = $("<img class='antenna' src='./assets/imgs/antenna"+parseInt(Math.random()*4)+".svg'></img>")
     $ant.css({
       "left": parseInt(Math.random()*(w-aw)) ,
       "position": "absolute",

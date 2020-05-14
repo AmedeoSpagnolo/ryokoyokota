@@ -88,3 +88,20 @@ svg {
   color: #8e98a7;
   font-size: 20px;
 }
+
+.game .ground{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  opacity: .9;
+}
+.game{
+  background-image: url(../imgs/bg_game.png);
+  background-size: cover;
+}
+.game #antennas{
+  opacity: .9;
+}
