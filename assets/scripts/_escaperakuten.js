@@ -5,8 +5,8 @@ $('document').ready(function(){
   var h = parseInt($("#canvas").height())
   var rw = parseInt($("#ryoko").width())
   var rh = parseInt($("#ryoko").height())
-  var aw = 70
-  var ah = 70
+  var aw = 80
+  var ah = 80
   $("#ryoko").css("left", w/2 - rw/2)
 
   var dropping;
