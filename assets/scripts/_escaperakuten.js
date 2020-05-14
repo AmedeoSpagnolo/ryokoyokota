@@ -68,7 +68,7 @@ $('document').ready(function(){
       "width": aw
     })
     $("#antennas").append($ant)
-    $ant.animate({top: $(".canvas").height()-rh-ah,}, Math.random() + 5000, function(){
+    $ant.animate({top: $(".canvas").height()-3*ah/2,}, Math.random() + 5000, function(){
       var _posA = parseInt($(this).css("left"))
       var _posR = parseInt($("#ryoko").css("left"))
       if(((_posA>=_posR)&&(_posA<=_posR+rw))||((_posA+aw>=_posR)&&(_posA+aw<=_posR+rw))){
